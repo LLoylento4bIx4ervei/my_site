@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Home</title>
 </head>
 <body>
-$END$
+{%for post in info%}
+<h1>{{post.content}}</h1>
+<h2>Hi, my name is {{post.name}}</h2>
+<p></p>
+
+
 </body>
+{%endfor%}
 </html>
