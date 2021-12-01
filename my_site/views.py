@@ -1,9 +1,24 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+
+
+
+info = [
+    {
+        'name': 'Stas',
+        'age': 23,
+        'content': 'My little site',
+        'date_posted': '01.12.2021'
+    }
+
+]
+
+
 
 
 def home(request):
-    return HttpResponse('<h1> Hello World</h1>')
+    return render(request, 'my_site/home_page.html')
 
 def about_author(request):
-    return HttpResponse('<h1>About Author</h1>')
+    post = {'info':info}
+    return render(request,'my_site/about.html', post)
