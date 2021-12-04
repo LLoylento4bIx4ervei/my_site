@@ -1,22 +1,14 @@
 {%extends 'my_site/base.html'%}
 {%block content%}
-{%for post in info%}
-    <h1>{{post.content}}</h1>
-    <h2>Hi, my name is {{post.name}}. I`m {{post.age}} y.o.</h2>
+<article class="media content-section">
+    <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#"></a>
+    <h2><a class="article-title">Hi, my name is Stas. I`m 23y.o.</a></h2>
             I create this little site on django.
     <p>I don't know many things, so you won't see anything incredible here.</p>
     <p>This is my first small site that I did not follow the tutorials(googled a little)).</p>
-    <p> This post dated {{post.date_posted}}</p>
-{%endfor%}
+    <small class="text-muted"> This post dated 03.12.2021</small>
+</article>
 {%endblock content%}
 
-<article class="media content-section">
-  <div class="media-body">
-    <div class="article-metadata">
-      <a class="mr-2" href="#">{{ post.author }}</a>
-      <small class="text-muted">{{ post.date_posted }}</small>
-    </div>
-    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
-    <p class="article-content">{{ post.content }}</p>
-  </div>
-</article>
