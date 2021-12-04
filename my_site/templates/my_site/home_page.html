@@ -7,7 +7,7 @@
       <a class="mr-2" href="#"></a>
     <h2><a class="article-title">{{post.name}}</a></h2>
         <p>{{post.content}}</p>
-    <small class="text-muted"> 03.12.2021 {{post.date_posted}}</small>
+    <small class="text-muted"> 03.12.2021 {{post.date_posted| date:'F d, Y '}}</small>
 </article>
 {%endfor%}
 {%endblock content%}
